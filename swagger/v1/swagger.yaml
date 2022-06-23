@@ -7,6 +7,8 @@ paths:
   "/categories":
     get:
       summary: list categories
+      tags:
+      - Category
       responses:
         '200':
           description: successful
@@ -20,6 +22,8 @@ paths:
         type: string
     get:
       summary: list meals
+      tags:
+      - Meal
       responses:
         '200':
           description: successful
@@ -33,6 +37,8 @@ paths:
         type: string
     get:
       summary: show meal
+      tags:
+      - Meal
       responses:
         '200':
           description: successful

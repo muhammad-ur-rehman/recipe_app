@@ -5,6 +5,7 @@ RSpec.describe 'categories', type: :request do
   path '/categories' do
 
     get('list categories') do
+      tags 'Category'
       response(200, 'successful') do
 
         after do |example|

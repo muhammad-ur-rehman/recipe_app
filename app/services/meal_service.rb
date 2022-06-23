@@ -14,7 +14,7 @@ class MealService < BaseService
 
   def meal_by_id
     response = request
-    return [] unless response['meals'].present?
+    return [] unless !response.body.include?('Warning') && response['meals'].present?
 
     Mapper::MealMapper.new(response['meals'].first).meal
   end
